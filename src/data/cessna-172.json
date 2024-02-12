@@ -1,0 +1,13 @@
+{
+    "id": "cessna-172",
+    "name": "Cessna 172",
+    "description": "The Cessna 172 Skyhawk is an American four-seat, single-engine, high wing, fixed-wing aircraft made by the Cessna Aircraft Company.[2] First flown in 1955,[2] more 172s have been built than any other aircraft.[3] It was developed from the 1948 Cessna 170 but with tricycle landing gear rather than conventional landing gear. The Skyhawk name was originally used for a trim package, but was later applied to all standard-production 172 aircraft, while some upgraded versions were marketed as the Cutlass.",
+    "checklists": [
+        {
+            "id": "pre-flight",
+            "name": "Pre-Flight",
+            "items": [
+            ]
+        }
+    ]
+}

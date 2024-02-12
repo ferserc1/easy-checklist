@@ -1,0 +1,83 @@
+{
+    "id": "a330-300",
+    "name": "Airbus A330 - 300",
+    "description": "The Airbus A330 is a wide-body aircraft developed and produced by Airbus. Airbus conceived several derivatives of the A300, its first airliner from the mid-1970s. Then the company began development on the A330 twinjet in parallel with the A340 quadjet and launched both designs with their first orders in June 1987. The A330-300, the first variant, took its maiden flight in November 1992 and entered service with Air Inter in January 1994. The slightly shorter A330-200 variant followed in 1998. The A330-300 has a range of 11,750 km (6,350 nmi; 7,300 mi) with 277 passengers, while the shorter A330-200 can cover 13,450 km (7,250 nmi; 8,360 mi) with 247 passengers.",
+    "checklists": [
+        {
+            "id": "pre-flight",
+            "name": "Pre-Flight",
+            "items": [
+                {
+                    "title": "Thrusters",
+                    "zone": "Pedestal",
+                    "status": "Iddle"
+                },
+                {
+                    "title": "Engine master 1 & 2",
+                    "zone": "Pedestal",
+                    "status": "Off"
+                },
+                {
+                    "title": "Engine Start",
+                    "zone": "Pedestal",
+                    "status": "Normal"
+                },
+                {
+                    "title": "Parking Break",
+                    "zone": "Pedestal",
+                    "status": "On"
+                },
+                {
+                    "title": "Wippers",
+                    "zone": "Over head panel",
+                    "status": "Off"
+                },
+                {
+                    "title": "BAT1, BAT2",
+                    "zone": "Over head panel, electric",
+                    "status": "On"
+                },
+                {
+                    "title": "APU BAT",
+                    "zone": "Over head panel, electric",
+                    "status": "On"
+                },
+                {
+                    "title": "Check voltages BAT1, BAT2 and APU",
+                    "zone": "Over head panel, electric",
+                    "status": "Check > 25V"
+                },
+                {
+                    "title": "External power (if AVAIL)",
+                    "zone": "Over head panel, electric",
+                    "status": "On",
+                    "description": "Conecta la alimentación al suministro externo para no consumir las baterías. Si no hay suministro externo, se reclama a los servicios de tierra"
+                },
+                {
+                    "title": "APU fire test",
+                    "zone": "Over head panel, APU fire alarm panel",
+                    "status": "Press test and check APU fire alarm",
+                    "description": "Se enciende la alarma general del avión."
+                },
+                {
+                    "title": "Master Alarm Button",
+                    "zone": "Front panel",
+                    "status": "Push to clear alarm"
+                },
+                {
+                    "title": "APU Master",
+                    "zone": "Over head panel",
+                    "status": "On"
+                },
+                {
+                    "title": "APU START",
+                    "zone": "Over head panel",
+                    "status": "On",
+                    "description": "Comienza el arranque del APU. Se espera a que el APU esté listo para ser utilizado. Se puede comprobar el estado de arranque en la pantalla fronatl",
+                    "hintImage": "/images/a330-300/apu-start.jpg"
+                }
+
+            ]
+        }
+    ]
+}

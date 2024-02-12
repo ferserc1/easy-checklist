@@ -1,0 +1,34 @@
+---
+import CheckListItem from "@/components/CheckListItem.astro";
+import type { PlaneData } from "@/data/types.d.ts";
+import Layout from "@/layouts/Layout.astro";
+
+const planes = await Astro.glob("../../../../data/*.json");
+const { planeId, id } = Astro.params;
+
+const planeData = planes.find(plane => plane.id === planeId) as PlaneData;
+const checklist = planeData?.checklists?.find(checklist => checklist.id === id);
+---
+<Layout title={checklist?.name || ""}>
+    <h1>{checklist?.name}</h1>
+    <ul>
+        {
+            checklist?.items.map(item => {
+                return <CheckListItem item={item} />
+            })
+        }
+    </ul>
+</Layout>
+
+<style>
+    ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        gap: 3px;
+        flex-direction: column;
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+
+</style>

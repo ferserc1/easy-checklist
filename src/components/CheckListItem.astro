@@ -1,0 +1,66 @@
+---
+import ItemInfo from "@/components/ItemInfo.jsx";
+
+const { item } = Astro.props;
+---
+<li class="check-list-item">
+    <label>
+        <input type="checkbox" />
+        <span>{item.title}: </span>
+    </label>
+    <i></i>
+    <strong class="check-item-status">{item.status}</strong>
+    <div class="hint-area">
+        { item.description || item.hintImage ? 
+            <ItemInfo client:load title={item.title} zone={item.zone} description={item.description} hintImage={item.hintImage} /> 
+            : <span></span>
+        }
+    </div>
+</li>
+
+<style>
+    .check-list-item {
+        display: flex;
+        flex-direction: rows;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 10px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        border-radius: 5px;
+    }
+
+    .check-list-item:nth-child(odd) {
+        background: var(--list-bg-color-odd);
+        color: var(--list-fg-color-odd);
+    }
+
+    .check-list-item:nth-child(odd) h1,h2,h3,h4,h5,h6,p,span,strong {
+        color: var(--list-fg-color-odd);
+    }
+
+    .check-list-item:nth-child(even) {
+        background: var(--list-bg-color-even);
+        color: var(--list-fg-color-even);
+    }
+
+    .check-list-item:nth-child(even) h1,h2,h3,h4,h5,h6,p,span,strong {
+        color: var(--list-fg-color-even);
+    }
+
+    .check-list-item > label {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .check-list-item > i {
+        border-bottom: 1px dashed black;
+        flex-grow: 1;
+        align-self: center;
+    }
+
+    .check-list-item > .hint-area {
+        width: 40px;
+    }
+</style>

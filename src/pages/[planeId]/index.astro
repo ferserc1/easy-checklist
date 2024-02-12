@@ -1,0 +1,27 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import type { PlaneData } from "@/data/types.d.ts";
+
+const { planeId } = Astro.params;
+
+const planes = await Astro.glob("../../data/*.json");
+
+const planeData = planes.find((plane) => plane.id === planeId) as PlaneData;
+
+---
+<Layout title={planeData?.name || ""}>
+    <header>
+        <h1>{ planeData?.name } Checklists</h1>
+        <p>{ planeData?.description }</p>
+    </header>
+    <section>
+        <h2>Available checklists:</h2>
+        <ul>
+            { planeData?.checklists.map((checklist) => (
+                <li>
+                    <a href={ `/${planeData?.id}/checklists/${checklist?.id}` }>{ checklist?.name }</a>
+                </li>
+            )) }
+        </ul>
+    </section>
+</Layout>

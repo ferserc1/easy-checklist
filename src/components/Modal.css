@@ -1,0 +1,26 @@
+
+.modal-background {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.modal-background dialog {
+    width: 90%;
+    max-width: 600px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.modal-background img {
+    max-width: 90%;
+}
