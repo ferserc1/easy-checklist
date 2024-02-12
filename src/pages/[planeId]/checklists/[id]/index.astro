@@ -9,6 +9,34 @@ const { planeId, id } = Astro.params;
 const planeData = planes.find(plane => plane.id === planeId) as PlaneData;
 const checklist = planeData?.checklists?.find(checklist => checklist.id === id);
 ---
+<!-- 
+    Ejemplo: comportamiento en el cliente utilizando JavaScript
+    Algunas veces no es necesario recurrir a React o Svelte para añadir comportamiento a una página.
+    En este caso solamente queremos marcar y desmarcar los pasos de la checklist, pero no necesitamos
+    persistencia del estado. Lo único que queremos es que los check boxes se marquen de forma
+    secuencial, es decir, no se puede marcar un paso si el anterior no está marcado, y no se puede
+    desmarcar un paso si el siguiente está marcado.
+ -->
+<script>
+    const inputs = Array.from(document.getElementsByTagName("input"));
+    inputs.forEach((input,i) => {
+        if (input.type === "checkbox") {
+            input.addEventListener("change", (e) => {
+                const prev = inputs[i-1];
+                const next = inputs[i+1];
+                // No se puede marcar un input si el anterior no está marcado
+                if (prev && !prev.checked && input.checked) {
+                    input.checked = false;
+                }
+                // No se puede desmarcar un input si el siguiente está marcado
+                if (next && next.checked && !input.checked) {
+                    input.checked = true;
+                }
+            });
+        }
+    });
+</script>
+
 <Layout title={checklist?.name || ""}>
     <h1>{checklist?.name}</h1>
     <ul>

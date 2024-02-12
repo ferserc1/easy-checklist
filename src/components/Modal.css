@@ -12,6 +12,10 @@
     justify-items: center;
 }
 
+.modal-background.hidden {
+    display: none;
+}
+
 .modal-background dialog {
     width: 90%;
     max-width: 600px;
@@ -19,6 +23,24 @@
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    align-items: center;
+}
+
+.modal-background dialog > button {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    padding: 3px;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(150, 0, 0);
 }
 
 .modal-background img {

@@ -4,7 +4,8 @@ export type ChecklistItemData = {
     status: string,
     zone?: string,
     description?: string,
-    hintImage?: string
+    hintImage?: string,
+    sequenceImges?: string[]
 };
 
 export type ChecklistData = {

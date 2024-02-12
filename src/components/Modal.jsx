@@ -1,10 +1,13 @@
-import { useEffect, useState } from 'react';
 import './Modal.css';
+import { CloseIcon } from './icons';
 
-export default function Modal({ visible, children, title }) {
+export default function Modal({ visible, children, title, onClose }) {
     return (
-        <section className="modal-background" style={{ display: visible ? "" : "none" }}>
-            <dialog style={{ display: "block" }}>
+        <section className={`${ visible ? "" : "hidden "}modal-background`} >
+            <dialog>
+                <button onClick={() => onClose()}>
+                    <CloseIcon />
+                </button>
                 { title && <h2>{title}</h2> }
                 {children}
             </dialog>

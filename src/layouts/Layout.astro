@@ -26,11 +26,38 @@ const { title } = Astro.props;
 		--list-bg-color-even: #437ab9;
 		--list-fg-color-odd: white;
 		--list-fg-color-even: white;
+		--gallery-bg-color: #b1c4f8;
+		--button-primary-bg-color: #0066db;
+		--button-primary-fg-color: white;
+		--button-primary-bg-hover-color: #004ea8;
+		--button-primary-fg-hover-color: white;
 	}
 
 	body {
 		font-family: sans-serif;
 	}
 
+	button {
+		background: var(--button-primary-bg-color);
+		color: var(--button-primary-fg-color);
+		stroke: var(--button-primary-fg-color);
+		border-radius: 7px;
+		border: 0;
+		box-sizing: border-box;
+		box-shadow: 0 0 5px 0 rgb(0 0 0 / 80%);
+		transition: all 60ms ease-in-out;
+		cursor: pointer;
+	}
+
+	button:hover {
+		background: var(--button-primary-bg-hover-color);
+		color: var(--button-primary-fg-hover-color);
+		stroke: var(--button-primary-fg-hover-color);
+	}
+
+	button:active {
+		box-shadow: 0 0 2px 0 rgb(0 0 0 / 80%);
+		transform: scale(1.08);
+	}
 
 </style>

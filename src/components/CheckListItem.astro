@@ -12,7 +12,7 @@ const { item } = Astro.props;
     <strong class="check-item-status">{item.status}</strong>
     <div class="hint-area">
         { item.description || item.hintImage ? 
-            <ItemInfo client:load title={item.title} zone={item.zone} description={item.description} hintImage={item.hintImage} /> 
+            <ItemInfo client:only title={item.title} zone={item.zone} description={item.description} hintImage={item.hintImage} sequenceImages={item.sequenceImages} /> 
             : <span></span>
         }
     </div>

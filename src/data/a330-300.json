@@ -73,8 +73,13 @@
                     "title": "APU START",
                     "zone": "Over head panel",
                     "status": "On",
-                    "description": "Comienza el arranque del APU. Se espera a que el APU esté listo para ser utilizado. Se puede comprobar el estado de arranque en la pantalla fronatl",
-                    "hintImage": "/images/a330-300/apu-start.jpg"
+                    "description": "Comienza el arranque del APU. Se espera a que el APU esté listo para ser utilizado. Se puede comprobar el estado de arranque en el ECAM",
+                    "hintImage": "/images/a330-300/fop-apu-panel.webp",
+                    "sequenceImages": [
+                        "/images/a330-300/apu-ecam-starting.webp",
+                        "/images/a330-300/apu-ecam-started.webp",
+                        "/images/a330-300/apu-available.webp"
+                    ]
                 }
 
             ]
