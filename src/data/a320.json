@@ -1,0 +1,282 @@
+{
+    "id": "a320",
+    "name": "Airbus A320",
+    "description": "The Airbus A320 family is a series of narrow-body airliners developed and produced by Airbus. The A320 was launched in March 1984, first flew on 22 February 1987, and was introduced in April 1988 by Air France. The first member of the family was followed by the longer A321 (first delivered in January 1994), the shorter A319 (April 1996), and the even shorter A318 (July 2003). Final assembly takes place in Toulouse in France; Hamburg in Germany; Tianjin in China since 2009; and Mobile, Alabama in the United States since April 2016.",
+    "checklists": [
+        {
+            "id": "plane-preparation",
+            "name": "Plane preparation (for Flight Factor a320)",
+            "items": [
+                {
+                    "title": "External power",
+                    "zone": "EFB Tablet, Service => Supply",
+                    "status": "On",
+                    "description": "Conectar la unidad de energía externa",
+                    "hintImage": "/images/a320/efb-service-supply.webp"
+                },
+                {
+                    "title": "Chock and Air Starter Unit",
+                    "zone": "EFB Tablet, Service => Supply",
+                    "status": "On Demand",
+                    "description": "Los calzos evitan que el avión se mueva cuando soltamos el freno de aparcamiento. La unidad de arranque de aire sirve para arrancar los motores si no vamos a utilizar la APU. Los calzos son recomendables para asegurar que el avión no se mueve a la hora de alinear el sistema de posicionamiento.",
+                    "hintImage": "/images/a320/efb-service-chock-air-starter.webp"
+                },
+                {
+                    "title": "Fuel preparation",
+                    "zone": "EFB Tablet, Service => Fuel",
+                    "status": "Check flight plan",
+                    "description": "Cargar el combustible requerido por el plan de vuelo. En el plan de vuelo, página 3, se muestra el desglose del combustible. La fila FUEL contiene el combustible estimado, el máximo y el extra, que se utiliza para operaciones de taxi y como margen para llegar al aeropuerto alternativo. Se introduce el valor indicado por la columna MAX",
+                    "hintImage": "/images/a320/flight-plan-fuel.webp"
+                },
+                {
+                    "title": "Cargo & passangers",
+                    "zone": "EFB Tablet, Service => Cargo & EFB Tablet, Service => PAX",
+                    "status": "Check flight plan",
+                    "description": "Configurar el peso total y el número de pasajeros. Los datos están en las filas PAX y CARGO de la página 3 del plan de vuelo",
+                    "hintImage": "/images/a320/flight-plan-fuel.webp"
+                }
+            ]
+        },
+        {
+            "id": "cockpit-preparation",
+            "name": "Cockpit Preparation",
+            "items": [
+                {
+                    "title": "Parking Brake",
+                    "zone": "Pedestal",
+                    "status": "On",
+                    "description": "No quitaremos el frento de estacionamiento hasta que no comience la operación de pushback"
+                },
+                {
+                    "title": "Batteries 1 and 2",
+                    "zone": "Over head panel",
+                    "status": "On",
+                    "description": "Las baterías se utilizan como fuente de alimentación temporal y de emergencia, mientras no se conecta el suministro externo o la APU",
+                    "hintImage": "/images/a320/batteries.webp"
+                },
+                {
+                    "title": "EXT PWR",
+                    "zone": "Over head panel",
+                    "status": "On",
+                    "description": "Si la unidad de suministro externo está conectada, el botón mostrará el texto AVAIL en verde. Pulsarlo para activar la alimentación externa",
+                    "hintImage": "/images/a320/ext-pwr.webp"
+                },
+                {
+                    "title": "BUS TIE",
+                    "zone": "Over head panel",
+                    "status": "On",
+                    "description": "Activar el bus de corriente para obtener energía del generador externo o de la APR. El botón BUS TIE tiene que estar apagado",
+                    "hintImage": "/images/a320/bus-tie.webp"
+                },
+                {
+                    "title": "APU Master SW",
+                    "zone": "Over head panel",
+                    "status": "On",
+                    "description": "Activar el interruptor principal de la APU (Auxiliar Power Unit). De los dos interruptores de la APU, es el superior. Esta unidad es una pequeña turbina situada en la cola del avión, que proporciona energía eléctrica y presión a los sistemas hidráulicos y neumáticos de la aeronave.",
+                    "hintImage": "/images/a320/apu-switches.webp"
+                },
+                {
+                    "title": "APU START",
+                    "zone": "Over head panel",
+                    "status": "On",
+                    "description": "Activar el interruptor de arranque de la APU (Auxiliar Power Unit). De los dos interruptores de la APU, es el inferior. Esto inicia el arranque de la APU, que puede monitorizarse en el panel ECAM. Cuando la unidad está en funcionamiento, el botón muestra el texto AVAIL en color verde, y en la pantalla del ECAM también aparece ese texto",
+                    "hintImage": "/images/a320/apu-switches.webp",
+                    "sequenceImages": [
+                        "/images/a320/apu-on.webp",
+                        "/images/a320/apu-ecam-starting.webp"
+                    ]
+                },
+                {
+                    "title": "APU GEN",
+                    "zone": "Over head panel",
+                    "status": "On",
+                    "description": "Activa el generador eléctrico de la APU. Si está apagado, se muestra el texto OFF, para encenderlo hay que pulsarlo y no se mostrará ningún texto",
+                    "hintImage": "/images/a320/apu-gen-on.webp"
+                },
+                {
+                    "title": "APU BLEED",
+                    "zone": "Over head panel",
+                    "status": "On",
+                    "description": "Activar el sangrado de la APU. Es el sistema de aire comprimido que genera la APU, y se utiliza para refrigerar/presurizar la cabina, en el caso de que los motores estén apagados, y para arrancar los motores.",
+                    "hintImage": "/images/a320/apu-bleed-on.webp"
+                },
+                {
+                    "title": "Cargo VENT, CAB FAN",
+                    "zone": "Over head panel",
+                    "status": "On",
+                    "description": "Estos dos interrupotres conectan la ventilazicón de la bodega de carga para evitar el sobrecalentamiento durante la preparación del avión. CAB FAN activa la ventilación de la cabina",
+                    "hintImage": "/images/a320/cargo-cab-ventilation.webp"
+                },
+                {
+                    "title": "All white lights OFF",
+                    "zone": "Over head panel",
+                    "status": "Remove OFF",
+                    "description": "Apagar todos los indicadores OFF en blanco del panel superior. Algunas luces pasarán de OFF a FAULT, como por ejemplo los generadores eléctricos de los motores. Se apagarán cuando arranquemos los motores"
+                },
+                {
+                    "title": "ADIRS",
+                    "zone": "Over head panel",
+                    "status": "NAV",
+                    "description": "Poner los switches de los tres sistemas ADIRS de navegación en NAV. Los indicadores luminosos se pondrán en ALIGN. El proceso dura entre 8 y 10 minutos, y se puede monitorizar en el ordenador de abordo. Cuando estén alineados, el indicador ALIGN parpadeará. Es MUY IMPORTANTE que el avión no se mueva durante el proceso. Mantener el freno de estacionamiento y los calzos en las ruedas.",
+                    "hintImage": "/images/a320/adirs-align.webp"
+                },
+                {
+                    "title": "Strobe Lights",
+                    "zone": "Over head panel",
+                    "status": "Auto",
+                    "description": "Las luces estroboscópicas son parte del mecanismo visual anti colisiones. Deben mantenerse encendidas durante todo el vuelo, hasta el aterrizaje. En modo automático el avión se encarga de encenderlas al despegar y apagarlas al aterrizar",
+                    "hintImage": "/images/a320/ext-lights.webp"
+                },
+                {
+                    "title": "Beacon",
+                    "zone": "Over head panel",
+                    "status": "Off",
+                    "description": "La luz de faro se tiene que encender antes de arrancar los motores para avisar al personal que se encuentre alrededor de que los motores están a punto de arranca. Son dos luces rojas tipo sirena que se encuentra en la panza y en el techo del avión. No se debe apagar hasta que los motores se apaguen.",
+                    "hintImage": "/images/a320/ext-lights.webp"
+                },
+                {
+                    "title": "NAV&LOGO 1 / 2",
+                    "zone": "Over head panel",
+                    "status": "As needed",
+                    "description": "Las luces de navegación se encuentran en los extremos de las alas. En el ala derecha es verde y en el ala izquierda es roja. La luz de logo está en el estabilizador de cola, e ilumina el estabilizador vertical. Se llama luz de logo porque ahí se suele colocar el logotipo de la compañía aérea. Hay dos juegos de luces, para encenderlas se utiliza el juego 1 o el 2. Deben encenderse cuando se arranca el avión y se conecta el generador exterior o el APU, y permanecer encendidas hasta que se desconecten estos sistemas.",
+                    "hintImage": "/images/a320/ext-lights.webp"
+                },
+                {
+                    "title": "Landing Lights",
+                    "zone": "Over head panel",
+                    "status": "Off",
+                    "description": "Son las luces más potentes del avión y se utilizan para iluminar la pista al despegar y aterrizar. Se encienden al acceder a la pista y se mantienen encendidas hasta los 10.000 pies de altura, o en torno a las 10 millas del aeropuerto. Se vuelven a encender en la aproximación, y se apagan al salir de la pista de aterrizaje (por el mismo motivo que se apagan las luces largas de un coche cuando viene otro de firente). Tienen tres estados: plegadas, apagadas y encendidas. Cuando están apagadas o encendidas es cuando están visibles, como los faros escamoteables de un coche.",
+                    "hintImage": "/images/a320/ext-lights.webp"
+                },
+                {
+                    "title": "Runway Turn OFF",
+                    "zone": "Over head panel",
+                    "status": "Off",
+                    "description": "Son unas luces situadas en el tren de aterrizaje delantero que giran junto con el tren de aterrizaje, y mejoran la visibilidad del piloto en condiciones nocturnas mientras se realizan operaciones de taxi. Solo se usan para eso: con el avión parado, al despegar o durante el aterrizaje se mantienen apagadas.",
+                    "hintImage": "/images/a320/ext-lights.webp"
+                },
+                {
+                    "title": "Nose Ligth",
+                    "status": "Off",
+                    "description": "Es la luz del morro del avión y tiene tres posiciones: apagada, taxi y TO (takeoff), que como su nombre indica se usan para operaciones de taxi y para despegue.",
+                    "hintImage": "/images/a320/ext-lights.webp"
+                },
+                {
+                    "title": "Wing Light",
+                    "zone": "Over head panel",
+                    "status": "Off",
+                    "description": "Iluminan el borde de ataque de las alas y la toma de aire de los motores. Sirven para ver si se ha acumulado hielo. Se encienden si hace falta para la inspección visual.",
+                    "hintImage": "/images/a320/ext-lights.webp"
+                },
+                {
+                    "title": "SEAT BELTS",
+                    "zone": "Over head panel",
+                    "status": "On",
+                    "description": "Enciende el indicador de abrochar cinturones de seguridad",
+                    "hintImage": "/images/a320/cabin-lights.webp"
+                },
+                {
+                    "title": "NO SMOKING",
+                    "zone": "Over head panel",
+                    "status": "On",
+                    "description": "Enciende el indicador de no fumar",
+                    "hintImage": "/images/a320/cabin-lights.webp"
+                },
+                {
+                    "title": "SIGNS emer exit lt",
+                    "zone": "Over head panel",
+                    "status": "ARM",
+                    "description": "Controla las luces de salida de emergencia. Lo normal es ponerlas en modo armado durante todo el vuelo",
+                    "hintImage": "/images/a320/cabin-lights.webp"
+                },
+                {
+                    "title": "Anti Skid/Nose Landing Gear (N/W CTRL)",
+                    "zone": "Over head panel",
+                    "status": "On",
+                    "description": "Son los sistemas anti deslizantes del tren de aterrizaje (como el ABS)",
+                    "hintImage": "/images/a320/landing-gear.webp"
+                },
+                {
+                    "title": "Thrust levers",
+                    "zone": "Pedestal",
+                    "status": "IDLE",
+                    "description": "Bajar el acelerador a la posición IDLE para asegurarnos de que el arranque de los motores se va a hacer sin problemas",
+                    "hintImage": "/images/a320/thrust-idle.webp"
+                },
+                {
+                    "title": "Engine Master Switch 1 & 2",
+                    "zone": "Pedestal",
+                    "status": "Off",
+                    "description": "Nos aseguramos de que los interruptores de los motores están en posición apagada.",
+                    "hintImage": "/images/a320/engine-master-switches.webp"
+                },
+                {
+                    "title": "Transponder",
+                    "zone": "Pedestal",
+                    "status": "Standby and Configure",
+                    "description": "Configuramos el transpondedor con la frecuencia adecuada. El modo TA/RA es el sistema de aviso de colisiones, sirve para prevenir colisiones con otras aeronaves en el aire"
+                }
+            ]
+        },
+        {
+            "id": "mcdu",
+            "name": "MCDU Preparation",
+            "items": [
+                {
+                    "title": "INIT page",
+                    "zone": "MCDU",
+                    "status": "Configure FROM/TO",
+                    "description": "Configurar origen y destino en página INIT"
+                },
+                {
+                    "title": "IRS INIT",
+                    "zone": "MCDU",
+                    "status": "Align on position",
+                    "description": "pulsar IRS INIT en la página de inicio. Cuando los ADIRS estén listos (las tres luces ALIGN parpadeando en el panel sobre la cabeza), pulsar ALIGN ON REF y luego CONFIRM ALIGN. El proceso tardará alrededor de un minuto más, tras lo cual se mostrará el texto GPS PRIMARY en la línea de entrada del MCDU",
+                    "hintImage": "/images/a320/mcdu-align-adirs-1.webp",
+                    "sequenceImages": [
+                        "/images/a320/mcdu-align-adirs-2.webp",
+                        "/images/a320/mcdu-align-adirs-3.webp",
+                        "/images/a320/mcdu-align-adirs-4.webp"
+                    ]
+                },
+                {
+                    "title": "INIT",
+                    "zone": "MCDU",
+                    "status": "complete",
+                    "description": "Completar los datos de la página INIT: número de vuelo (FLT NBR), Cost index (opcional)",
+                    "hintImage": "/images/a320/mcdu-init-page.webp"
+                },
+                {
+                    "title": "F-PLN",
+                    "zone": "MCDU",
+                    "status": "configure",
+                    "description": "Configurar el plan de vuelo en la página F-PLN. Puedes introducir la salida y la ruta, y borrar la discontinuidad hasta el aeropuerto destino, porque los datos del destino se introducen durante la fase de crucero, antes de llegar al punto de descenso, porque es la torre de control quien los confirma. Pero también puedes dejarlo configurado en este punto (si no usaas controladores aéreos te va a dar igual)"
+                },
+                {
+                    "title": "INIT > next age > ZFW/ZFWCG",
+                    "zone": "MCDU",
+                    "status": "Configure",
+                    "description": "Introducir los datos de zero fuel weight. Puedes obtenerlos de la tablet EFB en la página de PERFORMANCE, y se pueden introducir automáticamente con el botón SET de la tablet. También se pueden obtener del plan de vuelo. ZFW es el peso del avión sin combustible y con carga. Total Fuel on Board (BLOCK fuel) es el combustible total a bordo y ZFWCG es el centro de gravedad del avión sin combustible.",
+                    "hintImage": "/images/a320/mcdu-init-zfw.webp",
+                    "sequenceImages": [
+                        "/images/a320/efb-tablet-performance.webp"
+                    ]
+                },
+                {
+                    "title": "PERF => TAKE OFF",
+                    "zone": "MCDU",
+                    "status": "Configure",
+                    "description": "Introducir la configuración del despegue de la nave. Las velocidades V1, VR (rotate) y V2 se puede calcular en webs como http://perfcalc.pradz.de/. V1, VR y V2 son las velocidades de referencia. FLAPS/THS es la configuración de flaps, y depende de cómo se haya calculado V1, VR y V2."
+                }
+            ]
+        },
+        {
+            "id": "pushback",
+            "name": "Pushback & Taxi",
+            "items": [
+                
+            ]
+        }
+    ]
+}
